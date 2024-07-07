@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main>
+    <section>
+        <h2 id="posts"><a href="/posts">Posts</a></h2>
+        <p>things I write</p>
+        {{ with .Site.GetPage "/posts" }}
+        <ul>
+            {{ range .Pages.ByDate.Limit 7 }}
+                {{- .Render "pageslist" -}}
+            {{ end }}
+            <a href="/posts">more...</a>
+        </ul>
+        {{ end }}
+
+    </section>
+</main>
+{{ end }}

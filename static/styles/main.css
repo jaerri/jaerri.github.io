@@ -1,0 +1,139 @@
+:root {
+	--link-hover: #0060B6;
+	--text-light: #111;
+
+	--bg-body-light: #ddd;
+	--bg-header-light: #eee;
+	--bg-main-light: #fff;
+}
+
+/* border box */
+*,
+*::before, 
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+	padding: 0.5% 1%;
+}
+.block {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-light);
+	transition: color .2s;
+}
+a:hover:not(.link-title) {
+	color: var(--link-hover);
+	text-decoration: underline solid var(--link-hover) 1.5px;
+}
+body {
+	background-color: var(--bg-body-light);
+	font-family: Arial, Helvetica, sans-serif;
+}
+main {
+	background-color: var(--bg-main-light);
+	margin-inline: auto;
+	max-width: 75rem;
+	padding: 1rem;
+	border: 1px solid #ccc;
+}
+
+/* || Header */
+.site-header {
+	border-bottom: 5px ridge #999;
+	background-color: var(--bg-header-light);
+}
+.site-title {
+	display: inline;
+	padding: 0.2rem 2rem;
+	font-size: 2rem;	
+	font-weight: normal;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.site-topnav {
+	padding: 11px;
+	display: inline-flex;
+	justify-content: center;
+	a {
+		padding-inline: 10px;
+		border-color: black;
+		border-left: 2px solid black;
+	}
+	a:first-child {
+		padding-left: 0;
+		border-left: 0;
+	}
+}
+@media screen and (max-width: 600px) {
+	.site-title {
+		text-align: center;
+		display: revert;
+	}
+	.site-topnav {
+		display: flex;	
+	}
+}
+
+/* || Sidebar */
+.sidebar {
+	flex: 0.2;
+	@media (min-height: 300px) {
+		position: sticky;
+		top: 0;
+	}
+}
+.post-list:empty {
+	display: none;
+}
+.post-list  { 
+	> *:only-child { /* hide if no content */
+		display: none;
+	}
+	li {
+		list-style: none;
+		padding: 0.2rem 1ch;
+		border-top: 1px solid #bacabaca;
+	}
+} 
+.see-more {
+	display: block;
+}
+.see-more:hover {
+	color: #111;
+	text-decoration: underline;
+}
+.see-more::after {
+	content: "►";
+	display: inline-block;
+	position: relative;
+
+	transition: all .1s ease-in;
+	opacity: 0;
+	right: 1ch;
+}
+.see-more:hover::after {
+	opacity: 1;
+	right: 0; 
+}
+
+/* || Content */
+.content {
+	flex: 0.8;
+	display: flex;
+}
+.large-post {
+	max-height: 10rem;
+}
+.text-box {
+	padding: 2%;
+}

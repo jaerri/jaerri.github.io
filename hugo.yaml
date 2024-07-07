@@ -1,0 +1,8 @@
+summaryLength: 15
+capitalizeListTitles: false
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
