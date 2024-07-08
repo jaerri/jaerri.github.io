@@ -1,7 +1,7 @@
 ---
 title: 'HelloWorld, or the Lorem Ipsum disaster'
 date: 2024-06-17T10:37:22+07:00
-draft: true
+draft: false
 tags:
 - lorem
 - helloworld

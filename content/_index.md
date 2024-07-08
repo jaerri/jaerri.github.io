@@ -1,4 +1,4 @@
 ---
 title: 'Home Page'
-draft: true
+draft: false
 ---
