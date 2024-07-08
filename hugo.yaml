@@ -1,3 +1,6 @@
+baseURL: https://jaerri.github.io/
+languageCode: en-us
+title: jaerri
 summaryLength: 15
 capitalizeListTitles: false
 markup:
