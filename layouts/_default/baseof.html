@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/styles/main.css" />
     <title>
-        {{- block "title" . -}}
-            {{- .Title -}}
-        {{- end -}}
+        {{- .Title -}}
     </title>
+    {{- block "head" . -}}{{- end -}}
 </head>
 <body>
     {{- block "site-header" . -}}
